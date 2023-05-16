@@ -13,6 +13,7 @@ A template client package with some CI configured and documentation of the manua
    1. Add a wait timer protection rule for 5 minutes.
    1. Allow administrators to bypass configuration rules.
 1. Finish workflow setup.
+   1. Go to Settings -> General and check "Allow Auto-Merge" under the pull request section.
    1. PR the new client package to the `target` matrix in the `dispatch` step of the schema validation workflow: [link](https://github.com/hpackage/hpackage-schema/blob/main/.github/workflows/validate.yml)
    1. Find the `build` workflow in the new repository and add build and test steps for your build system.
 1. Replace this readme! A good client package describes how types are generated, where to find documentation, and a brief
