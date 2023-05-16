@@ -12,6 +12,11 @@ A template client package with some CI configured and documentation of the manua
    1. Name the environment `delayed-schema-sync`.
    1. Add a wait timer protection rule for 5 minutes.
    1. Allow administrators to bypass configuration rules.
+1. Configure dependabot.
+   1. Open `/github/dependabot.yml`.
+   1. Delete the block for the `gitsubmodule` package ecosystem; that's only used to keep the template repo up to date.
+      We'll set up a better workflow for syncing submodules in a moment.
+   1. Uncomment the block for the target language's package ecosystem. Available options are listed in [the Dependabot docs](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem).
 1. Finish workflow setup.
    1. Go to Settings -> General and check "Allow Auto-Merge" under the pull request section.
    1. PR the new client package to the `target` matrix in the `dispatch` step of the schema validation workflow: [link](https://github.com/hpackage/hpackage-schema/blob/main/.github/workflows/validate.yml)
