@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+  # - package-ecosystem: <your package manager here>
+  #   directory: /
+  #   schedule:
+  #     interval: weekly
